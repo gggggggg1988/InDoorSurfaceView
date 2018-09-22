@@ -160,7 +160,7 @@ public class InDoorView extends SurfaceView implements SurfaceHolder.Callback, V
             float YIn = fy - by;
             XIn *= scale1;//坐标根据图片缩放而变化
             YIn *= scale1;
-            bx = fx - XIn;//左上角的坐标等于中点坐标加图中偏移的坐标
+            bx = fx - XIn;//之前的中点坐标减去缩放后的中点坐标，之后得出负的左上角起始坐标（如果是放大）
             by = fy - YIn;
         }
     }

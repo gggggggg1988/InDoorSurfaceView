@@ -64,6 +64,10 @@ public abstract class BitAdapter implements BitBuffer {
 
     public abstract Bitmap getBgBitmap();
 
+    /**
+     * 返回背景图bitmap
+     * @return
+     */
     @Override
     public Bitmap getBitBuffer() {
         return bitmap;
@@ -75,7 +79,7 @@ public abstract class BitAdapter implements BitBuffer {
     private Paint getPaint() {
         if (paint == null) {
             paint = new Paint();
-            paint.setColor(Color.BLUE);
+            paint.setColor(Color.RED);
             paint.setStyle(Paint.Style.FILL);
             paint.setAlpha(30);
         }

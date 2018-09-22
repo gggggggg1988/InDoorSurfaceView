@@ -1,7 +1,6 @@
 package com.karonl.instance;
 
 import android.graphics.Canvas;
-import android.util.Log;
 import android.view.SurfaceHolder;
 
 import com.karonl.instance.Interface.DrawFramesListener;
@@ -50,10 +49,12 @@ public class DrawThread extends Thread {
             c = surfaceHolder.lockCanvas(); // 注意lock的时间消耗
             try {
                 synchronized (surfaceHolder) {
+
                     // 调用外部接口
                     this.listener.onDraw(c);
                     // 调用外部接口
                     long endTime = System.currentTimeMillis();
+                   // Log.i(TAG, "draw--endTime: "+endTime);
                     /**
                      * 计算出绘画一次更新的毫秒数
                      * **/
